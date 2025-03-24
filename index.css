@@ -31,3 +31,19 @@
     font-size: 20px; 
 }
 
+.image-container {
+    display: flex;
+    justify-content: space-around; /* Spread out images equally */
+  }
+  
+  .image-item {
+    text-align: center; /* Center the caption text */
+  }
+  
+  .image-item img {
+    display: block; /* Ensures images are block elements so captions can be below */
+    margin: 0 auto; /* Center the images */
+  }
+
+
+
