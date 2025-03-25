@@ -13,7 +13,11 @@
 
 .table-item {
     border: 3px solid black; 
-    margin: 2px
+    padding: .25em; 
+}
+
+.center {
+    text-align: center;
 }
 
 .flex-container {
@@ -43,6 +47,7 @@
   .image-item img {
     display: block; /* Ensures images are block elements so captions can be below */
     margin: 0 auto; /* Center the images */
+    border: 3px solid black; 
   }
 
 
