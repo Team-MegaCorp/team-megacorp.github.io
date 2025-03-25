@@ -1,0 +1,54 @@
+ 
+ .nav-bar-container {
+    list-style-type: none;
+    margin: 0;
+    padding : 0; 
+}
+
+.nav-bar-item {
+    display: inline;
+    padding-right: .5em; 
+    font-size: 20px;
+}
+
+.table-item {
+    border: 3px solid black; 
+    padding: .25em; 
+}
+
+.center {
+    text-align: center;
+}
+
+.flex-container {
+    display: flex; 
+    justify-content: space-around;
+    
+}
+
+.p-text {
+    color: rgb(50, 50, 50)
+}
+
+.link {
+    padding-right: 1em;
+    font-size: 20px; 
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-around; /* Spread out images equally */
+  }
+  
+  .image-item {
+    text-align: center; /* Center the caption text */
+  }
+  
+  .image-item img {
+    display: block; /* Ensures images are block elements so captions can be below */
+    margin: 0 auto; /* Center the images */
+    border: 3px solid black; 
+  }
+
+
+
