@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Team MegaCorp</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href = "../../../index.css"> 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="container">
+  <ul class = "nav-bar-container">
+    <li class = "nav-bar-item"><a href = ../../../index.html>Home</a></li>
+    <li class = "nav-bar-item"><a href = ../../design.html>Design Docs</a></li>
+    <li class = "nav-bar-item"><a href = ../../styleguide.html>Style Guide</a></li>
+    <li class = "nav-bar-item"><a href = ../../download.html>Game Downloads</a></li>
+    <li class = "nav-bar-item"><a href = ../../demovid.html>Demo Video</a></li>
+    <li class = "nav-bar-item"><a href = ../../presentation.html>Beta Presentation</a></li>
+    <li class = "nav-bar-item"><a href = ../../artprogress.html>Art Progress</a></li>
+    <li class = "nav-bar-item"><a href = ../../techprogress.html>Tech Progress</a></li>
+    <li class = "nav-bar-item"><a href = ../../artportfolio.html>Art Portfolio</a></li>
+  </ul>
+
+  <h1>Tech Update from Saturday, 3/29/25</h1>
+
+  <h3>Week Summary</h3>  
+
+  <br/>
+  <h4> Casette Manager </h4>
+  <p>
+    The next manager we needed to implement is the casette manager. We decided that this manager would prevent
+    bloating logic in the player blueprint and could manage casette progress and modifications. The player makes 
+    calls to the casette manager to know the currently active casette and to swap between casettes. The manager 
+    also tracks what casettes the player currently has.
+  </p>
+
+  <br/>
+  <h4> Casette Objects </h4>
+  <p>
+    The next core element we implemented is the casette class. Casettes are the primary collectible in the game
+    and they can modify the strength of player movements. Currently the casettes contain the modification values
+    for the player moveset and they generate overlap events. They also have a bobbing up and down animation, and we are thinking
+    of adding a spin animation as well. Their size will probably be increased as well. 
+  </p>
+
+  </br>
+  <h4>Character-Cassette Interaction</h4>
+  <p>
+    We had to update the input action for swapping the player's cassettes, as its implementation worked for mouse and keyboard
+    but it had issues on controller. It now works correctly on both, meaning the player can swap through their array of cassettes
+    in both directions(left and right). The player also has a pick up cassette function which allows them to pick up casette objects.
+  </p>
+
+  </br>
+  <h4>Character Actions on Beat</h4>
+  <p>
+    The character now only receives modifier benefits whenever they perform actions on beat. Changing the cassette changes these modifiers. 
+    The timing window is fairly tight and will likely be revised with time.
+  </p>
+
+  </br>
+  <h4>Early Shader Implementation</h4>
+  <p>
+    We implemented a pixelated filter for the game to give it a more distinct visual style. We will revise the shader more as we 
+    continue implementing art assets, to ensure it is all cohesive.
+  </p>
+
+  </br>
+  <h4>Music Implementation</h4>
+  <p>
+    We implemented a work in progress first cassette track to ensure that the wwise music implementation is working with the Rhythm
+    Manager. There is desync issues with the Rhythm manager using the in game clock, so it will be transistioned over to a real time 
+    clock. 
+  </p>
+
+  </br>
+  <h4>Early Metrononome UI</h4>
+  <p>
+    There is a very basic visual metronome so that the player has a visual to refer to when trying to be on beat. As of right now it
+    is a flashing circle centered on the bottom of the screen.
+  </p>
+</div>
