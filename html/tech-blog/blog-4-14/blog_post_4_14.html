@@ -28,11 +28,67 @@
   <h3>Week Summary</h3>  
 
   <br/>
-  <h4> </h4>
+  <h4>Specific Casette Collectibles</h4> 
   <p>
-    
+    Using the casette class we created last week, we created specific derived children blueprints that will serve as the three
+    main collectibles for the game. They are currently the dash cassette(dash improvement), the jump cassette(improves jump), 
+    and the groove cassette(imrpoves both abilities to a lesser extent). We have given them initial modifier values, but these
+    will probably change as we test what feels best to use for movement. The current intended order of collecting these
+    cassettes is groove -> dash -> jump. We are considering make both the dash or jump accesible as soon as you have the groove 
+    cassette though. 
   </p>
 
+  <br/>
+  <h4>Early Cassette UI Implementation</h4> 
+  <p>
+    It is important for the player to have an easy to reference way to identify which cassette they currently have equppied so 
+    we created an UI system that uses place holders assets for the time being. The UI is cycle type UI which reflects how the 
+    player can change their casette by using a left or right input. Implementing this ui in the most natural way required adjusting
+    how the equipped cassette is set in our cassette manager so that the UI could update the 'positions' of the cassettes. The ui
+    assets will be updated with properly design ones later on, and if there is time some animation of the UI shifting left or right
+    will look much nicer than the current instant swap.
+  </p>
 
+  <br/>
+  <h4>Early Menu systems</h4> 
+  <p>
+    The game currently has an early implementation of the main menu and controls menus. The main menu can lead to the game scene, 
+    controls menu, or quit the game. All ui will eventually be updated with nicer assets, but the goal is to keep these menus clean
+    and easy to navigate. We also woud like to implement a simple pause menu, so that the player can easily return to the main menu 
+    and quit the game.
+  </p>
+
+  <br/>
+  <h4>Simple Dialogue System</h4> 
+  <p>
+    We implemented a simple dialogue system that could be used for npc interactions or just whenever we want to put text information
+    in a clean way on the screen. It just includes text boxes with text that can be progressed at the press of a button. The player
+    was also given an interaction zone to trigger interactions. All of these elements were tested on a test cat npc. 
+  </p>
+
+  <br/>
+  <h4>Dynamic Audio Update</h4> 
+  <p>
+    We have a relatively simple implementation of dynamic audio incorporated where the song that is playing changes when you enter a 
+    dialogue sequence with the cat npcs. 
+  </p>
+
+  <br/>
+  <h4>Real Time Clock Fixes</h4> 
+  <p>
+    The Rhythm manager received another update that aims to improve the desync issues that we have encountered. The BPM system now
+    uses the Unreal Engine quartz system which has provided the most accurate timing out of all of our implementations. Desync issues
+    may still be present on a player to player basis, so we plan to implement a simple offset test system to account for this.
+  </p>
+
+  <br/>
+  <h4>Player Animation State Machine</h4> 
+  <p>
+    An early version of the player animation state machine has been implemented. Currently it only supports a blend space we created
+    which adjusts a default animation based on the players velocity. This blend space relies on an idle, walk, and run animations. A 
+    jump state was implemented, however the animation was removed for the time being as it did not sync well with our physics. In the 
+    future we intend to find a jump animation for the characters jump, a falling animation for when the character is in the air, and 
+    a dash animation. A landing animation would be useful if we find the time. 
+  </p>
 
 </div>
